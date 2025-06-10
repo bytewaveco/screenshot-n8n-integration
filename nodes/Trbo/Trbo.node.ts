@@ -73,7 +73,7 @@ export class Trbo implements INodeType {
 						name: 'Get Link Metrics',
 						value: 'getLinkMetrics',
 						action: 'Get profile link metrics',
-						description: 'List link metrics for this profile',
+						description: 'List link metrics for the profile associated with the API key',
 						routing: {
 							request: {
 								method: 'GET',
@@ -101,7 +101,7 @@ export class Trbo implements INodeType {
 						name: 'Get Links',
 						value: 'getLinks',
 						action: 'Get profile links',
-						description: 'List links owned by this profile',
+						description: 'List links owned by the profile associated with the API key',
 						routing: {
 							request: {
 								method: 'GET',
@@ -243,7 +243,7 @@ export class Trbo implements INodeType {
 				name: 'searchQuery',
 				type: 'string',
 				default: '',
-				description: 'Query string for public search',
+				description: 'Query string for searching the available public links',
 				displayOptions: {
 					show: {
 						operation: ['getPublicSearch'],
@@ -320,7 +320,7 @@ export class Trbo implements INodeType {
 				name: 'alias',
 				type: 'string',
 				default: '',
-				description: 'Alias for the link',
+				description: 'The alias for the link (example: https://trbo.link/alias)',
 				displayOptions: {
 					show: {
 						operation: ['createLink', 'updateLink'],
@@ -332,7 +332,7 @@ export class Trbo implements INodeType {
 				name: 'urlCreate',
 				type: 'string',
 				default: '',
-				description: 'URL for the link',
+				description: 'The URL the alias will redirect to',
 				required: true,
 				displayOptions: {
 					show: {
@@ -345,7 +345,7 @@ export class Trbo implements INodeType {
 				name: 'urlUpdate',
 				type: 'string',
 				default: '',
-				description: 'URL for the link',
+				description: 'The URL the alias will redirect to',
 				displayOptions: {
 					show: {
 						operation: ['updateLink'],
@@ -357,7 +357,7 @@ export class Trbo implements INodeType {
 				name: 'public',
 				type: 'boolean',
 				default: true,
-				description: 'Whether the link is public',
+				description: 'Whether the link is availabe to the public and providing an active redirect',
 				displayOptions: {
 					show: {
 						operation: ['createLink', 'updateLink'],
@@ -369,7 +369,7 @@ export class Trbo implements INodeType {
 				name: 'hidden',
 				type: 'boolean',
 				default: false,
-				description: 'Whether the link is hidden',
+				description: 'Whether the link is hidden from public search and the profile if the profile is public',
 				displayOptions: {
 					show: {
 						operation: ['createLink', 'updateLink'],
@@ -381,7 +381,7 @@ export class Trbo implements INodeType {
 				name: 'unsearchable',
 				type: 'boolean',
 				default: false,
-				description: 'Whether the link is unsearchable',
+				description: 'Whether the link is is allowed to appear in public search',
 				displayOptions: {
 					show: {
 						operation: ['createLink', 'updateLink'],
