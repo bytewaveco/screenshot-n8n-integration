@@ -9,8 +9,7 @@ export class Screenshot implements INodeType {
 		icon: 'file:trbo.svg',
 		group: ['transform'],
 		version: 1,
-		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Take a screenshot of a website',
+		description: 'Take a screenshot and collect metadata from a URL',
 		defaults: {
 			name: 'Screenshot',
 		},
@@ -22,8 +21,8 @@ export class Screenshot implements INodeType {
 				name: 'url',
 				type: 'string',
 				default: '',
-				noDataExpression: true,
 				required: true,
+				description: 'The URL to visit',
 			},
 			{
 				displayName: 'Width',
