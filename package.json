@@ -1,21 +1,21 @@
 {
-	"name": "@bytewaveco/n8n-nodes-trbo",
+	"name": "@bytewaveco/n8n-nodes-screenshot",
 	"version": "1.0.0",
-	"description": "TRBO integration for n8n",
+	"description": "Website screenshot integration for n8n",
 	"keywords": [
 		"n8n-community-node-package",
-		"trbo",
+		"screenshot",
 		"n8n"
 	],
 	"license": "MIT",
-	"homepage": "https://trbo.link",
+	"homepage": "https://bytewave.co",
 	"author": {
 		"name": "Bytewave",
 		"email": "support@bytewave.co"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bytewaveco/trbo-n8n-integration.git"
+		"url": "https://github.com/bytewaveco/screenshot-n8n-integration.git"
 	},
 	"engines": {
 		"node": ">=20.15"
@@ -34,11 +34,8 @@
 	],
 	"n8n": {
 		"n8nNodesApiVersion": 1,
-		"credentials": [
-			"dist/credentials/TrboApi.credentials.js"
-		],
 		"nodes": [
-			"dist/nodes/Trbo/Trbo.node.js"
+			"dist/nodes/Screenshot/Screenshot.node.js"
 		]
 	},
 	"devDependencies": {
@@ -51,5 +48,8 @@
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
+	},
+	"dependencies": {
+		"puppeteer": "^24.11.2"
 	}
 }

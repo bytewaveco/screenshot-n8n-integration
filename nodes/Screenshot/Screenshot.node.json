@@ -1,17 +1,12 @@
 {
-	"node": "n8n-nodes-trbo",
+	"node": "n8n-nodes-screenshot",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["Miscellaneous"],
 	"resources": {
-		"credentialDocumentation": [
-			{
-				"url": "https://trbo.link/docs"
-			}
-		],
 		"primaryDocumentation": [
 			{
-				"url": "https://trbo.link/docs"
+				"url": "https://bytewave.co"
 			}
 		]
 	}
